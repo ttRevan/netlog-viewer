@@ -42,6 +42,7 @@ function handleFile(files) {
         }
         var canvas = $("#plot")[0];
         var context = canvas.getContext("2d");
+        context.clearRect(0, 0, width, height);
         var canvasWidth = canvas.clientWidth;
         var canvasHeight = canvas.clientHeight;
         width = canvas.width = canvasWidth;
@@ -59,6 +60,10 @@ function handleFile(files) {
             } else {
                 context.lineTo(cPos.x, cPos.y);
             }
+            context.save();
+            context.fillStyle = 'rgb(200, 200, 200)';
+            context.fillRect(cPos.x, 0, 1, height);
+            context.restore();
         }
         context.stroke();
 
