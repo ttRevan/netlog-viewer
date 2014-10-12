@@ -1,0 +1,27 @@
+html, body {
+    overflow: hidden;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: inherit;
+    display: block;
+}
+
+#chart {
+    width: 100%;
+    background-color: rgb(70, 70, 70);
+}
+
+.navbar-dense {
+    margin-bottom: 0;
+}
